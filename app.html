@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caffeinate+ - 远程及无头 Mac 部署的最佳伴侣</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        .gradient-text { background: linear-gradient(135deg, #007AFF, #5856D6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- 导航栏 -->
+    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <img src="AppIcon.png" alt="Caffeinate+ Logo" class="w-8 h-8 rounded-lg">
+                <span class="text-xl font-bold tracking-tight">Caffeinate+</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#features" class="hover:text-blue-600 transition">功能</a>
+                <a href="#use-cases" class="hover:text-blue-600 transition">用例</a>
+                <a href="#setup" class="hover:text-blue-600 transition">快速入门</a>
+                <a href="#faq" class="hover:text-blue-600 transition">常见问题</a>
+                <a href="#qrcode" class="hover:text-blue-600 transition">购买</a>
+            </div>
+            <a href="#" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-200">免费下载</a>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
+                远程 Mac 部署的<span class="gradient-text">终极利器</span>
+            </h1>
+            <p class="text-xl text-slate-600 mb-10 leading-relaxed">
+                四大核心功能，集成于一个原生 macOS 应用中。<br>为无头服务器（Headless Mac）、AI 代理及远程管理提供完美支持。
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#" class="w-full sm:w-auto bg-slate-900 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-800 transition">立即开始</a>
+                <a href="#" class="w-full sm:w-auto bg-white border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition">查看 GitHub</a>
+            </div>
+            <div class="mt-16 relative">
+                <div class="absolute -inset-4 bg-gradient-to-r from-blue-100 to-indigo-100 blur-3xl opacity-50 -z-10"></div>
+                <img src="hero-screenshot.png" alt="Caffeinate+ Interface" class="rounded-2xl shadow-2xl border border-slate-200 mx-auto max-w-full" onerror="this.src='hero-screenshot.png'">
+            </div>
+        </div>
+    </section>
+
+    <!-- 功能矩阵 -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">强大功能，触手可及</h2>
+                <p class="text-slate-500">专为 AI 工程师和系统管理员设计的生产力工具</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 唤醒管理 -->
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-xl transition group">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mb-6 text-xl group-hover:scale-110 transition">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">唤醒管理器 (Awake Manager)</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed text-sm">通过 IOPM 断言确保您的 Mac 永不进入深度休眠。智能鼠标抖动技术仅在真正空闲时触发，防止锁屏，同时不干扰您的正常操作。</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>防止显示器与系统休眠</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>智能光标移动防止闲置检测</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>一键优化系统性能</li>
+                    </ul>
+                </div>
+
+                <!-- 虚拟显示器 -->
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-xl transition group">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 text-xl group-hover:scale-110 transition">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">虚拟显示器 (Virtual Display)</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed text-sm">即使没有物理显示器，也能为无头 Mac 开启 UI 自动化。基于 Apple 原生 API，支持全 GPU 加速及任意分辨率。</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>支持 720p 至 4K 分辨率</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>完善的 HiDPI / Retina 支持</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>重启后自动保持配置</li>
+                    </ul>
+                </div>
+
+                <!-- 音频路由 -->
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-xl transition group">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6 text-xl group-hover:scale-110 transition">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">音频路由器 (Audio Router)</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed text-sm">将系统音频实时路由至虚拟麦克风。让您的 AI 代理（如 Claude）能够“听见”Mac 上发生的任何声音。</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>零延迟音频回环</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>创建多输出混合设备</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>完美适配 AI 代理部署</li>
+                    </ul>
+                </div>
+
+                <!-- 系统监控 -->
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-xl transition group">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mb-6 text-xl group-hover:scale-110 transition">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">系统监控 (System Monitor)</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed text-sm">基于 SwiftUI 构建的原生仪表盘。随时随地通过简洁的界面查看远程 Mac 的健康状态。</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>CPU & 内存实时占用</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>温度、电池与热状态监控</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>系统运行时间追踪</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用例 -->
+    <section id="use-cases" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">专为真实场景构建</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center font-bold text-blue-400">01</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">AI 代理部署</h3>
+                        <p class="text-slate-400">运行 OpenClaw、Claude Computer Use 或任何需要屏幕访问、音频捕获和 24/7 在线的 AI 代理。Caffeinate+ 提供底层支撑，让 AI 能够流畅操作界面。</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center font-bold text-blue-400">02</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">远程 Mac 管理</h3>
+                        <p class="text-slate-400">通过 VNC、AnyDesk 或 SSH 访问您的 Mac Mini。即使没有连接物理屏幕，也能获得全分辨率显示效果，绝无休眠干扰导致的断连。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">常见问题</h2>
+            <div class="space-y-8">
+                <div>
+                    <h4 class="font-bold mb-2 text-lg">支持 Apple Silicon (M1/M2/M3/M4) 吗？</h4>
+                    <p class="text-slate-600 leading-relaxed">是的！Caffeinate+ 是完全原生的应用，已针对 Apple Silicon 和 Intel 芯片进行了深度优化。</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-2 text-lg">它与 Amphetamine 有什么区别？</h4>
+                    <p class="text-slate-600 leading-relaxed">Caffeinate+ 不仅仅是防止休眠。它还能创建带有 GPU 加速的虚拟显示器、进行系统级音频路由，并提供专业的系统状态实时监控。</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-2 text-lg">它会收集我的数据吗？</h4>
+                    <p class="text-slate-600 leading-relaxed">绝对不会。我们不收集任何个人数据、使用分析或遥测数据。所有核心功能均可在离线状态下完美运行。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 付费二维码区 -->
+    <section id="qrcode" class="py-24 bg-gradient-to-b from-slate-50 to-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <!-- 左侧：二维码 -->
+                    <div class="md:w-1/2 flex items-center justify-center p-10 bg-gradient-to-br from-blue-50 to-indigo-50">
+                        <div class="w-56 h-56 bg-white rounded-2xl shadow-md border border-slate-200 flex items-center justify-center p-4">
+                            <div class="w-full h-full bg-slate-100 rounded-xl flex items-center justify-center">
+                                <img src="erweima.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 右侧：购买信息 -->
+                    <div class="md:w-1/2 p-10 flex flex-col justify-center">
+                        <h2 class="text-2xl font-bold mb-3">获取 Caffeinate+</h2>
+                        <p class="text-slate-500 text-sm mb-6 leading-relaxed">扫描左侧二维码完成支付，即可获得永久授权许可。一次购买，终身免费更新。</p>
+                        <ul class="text-sm text-slate-600 space-y-3 mb-8">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>永久买断，无订阅费用</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>终身免费更新</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>支持微信扫码（备注您的机器号）</li>
+                        </ul>
+                        <p class="text-xs text-slate-400">支持 macOS 13.0+ · Apple Silicon & Intel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-12 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <img src="AppIcon.png" alt="Caffeinate+ Logo" class="w-6 h-6 rounded">
+                <span class="font-bold">Caffeinate+</span>
+            </div>
+            <p class="text-slate-500 text-sm">© 2026 Caffeinate+. 保留所有权利。由热爱 macOS 的开发者构建。</p>
+            <div class="flex gap-6 text-slate-400 text-lg">
+                <a href="#" class="hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-blue-600"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
